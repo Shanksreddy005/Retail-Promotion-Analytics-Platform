@@ -26,7 +26,10 @@ In retail and e-commerce, promotions are widely used to acquire customers, stimu
 - **AOV differences were not statistically significant** (t-test p = 0.344), showing that discount incentives did not materially alter the average order size.
 - **Modest Business Impact**: Although promotion groups exhibited statistically detectable differences in repeat purchase behavior (Z-test p < 0.001), the absolute effect sizes were small, suggesting limited practical business impact despite statistical significance.
 
-## Skills Demonstrated
+## Business Recommendation
+Based on the simulated experimentation framework, moderate discount strategies (e.g., 10%) may offer the strongest balance between customer retention and revenue preservation. However, future validation using real campaign data is required before operational deployment.
+
+## Technical Competencies Demonstrated
 - **ETL Development**: Engineered automated Python pipelines utilizing Pandas and NumPy to execute data ingestion, validation, deduplication, and feature engineering.
 - **Relational Data Modeling**: Designed a clean Star Schema database structure separating dimension tables (`dim_customers`, `dim_promotions`, `dim_date`) from fact tables (`fact_orders`, `fact_customer_metrics`).
 - **SQL Analytics & KPI Development**: Authored complex SQL business queries to calculate regional and monthly campaign revenue trends, customer lifetime value, and AOV uplift.
@@ -84,7 +87,7 @@ Retail-Promotion-Analytics/
    ```
 
 3. **Add Data**:
-   Ensure the Olist CSV dataset files are placed in the root folder.
+   Download the Olist Brazilian E-Commerce dataset from Kaggle and place the CSV files in the project root directory before executing the pipeline.
 
 4. **Run the Execution Pipeline**:
    Execute the following scripts sequentially:
