@@ -37,6 +37,16 @@ Based on the simulated experimentation framework, moderate discount strategies (
 - **Business Dashboard Specification**: Formulated detailed reporting specifications for Tableau and Excel dashboards targeting executive and operational stakeholders.
 - **Analytics Engineering Practices**: Structured database loading scripts with dotenv configuration, verified query execution, and enforced strict reproducibility seeds.
 
+### Portfolio Skills Demonstrated
+- Developed an interactive Excel dashboard utilizing Pivot Tables, Pivot Charts, slicers, and KPI scorecards to evaluate promotional effectiveness, customer retention, and regional performance across simulated retail campaigns.
+
+## Excel Dashboard
+The Excel dashboard communicates campaign efficacy directly to stakeholders and business executives. Built on the Star Schema warehouse outputs, it leverages interactive slicers, metrics grids, and conditional formatting.
+
+Interactive dashboard developed using Pivot Tables, Pivot Charts, KPI scorecards, and slicers to evaluate promotional effectiveness.
+
+![Excel Dashboard](images/excel_dashboard.png)
+
 ## Architecture Diagram
 ```mermaid
 graph TD
@@ -63,10 +73,14 @@ Retail-Promotion-Analytics/
 │   └── processed/            # Clean CSVs with engineered features
 ├── database/
 │   └── retail_promotions.db  # Local SQLite database
+├── excel/
+│   ├── Promotion_Analytics_Dashboard.xlsx # Completed Excel workbook
+│   └── excel_spec.md         # Spreadsheet design layout spec
+├── images/
+│   └── excel_dashboard.png   # Dashboard visual preview mockup
 ├── notebooks/                # Jupyter Notebooks (Cleaning, EDA, Stats, Cohorts)
 ├── sql/                      # SQL assets (schema.sql, views.sql, business_queries.sql)
 ├── tableau/                  # BI Specifications
-├── excel/                    # Excel Specifications
 ├── scripts/                  # Modular Python executable pipelines
 ├── reports/                  # Findings & Executive Summary Markdown templates
 ├── README.md
@@ -95,6 +109,7 @@ Retail-Promotion-Analytics/
    python scripts/generate_promotions.py
    python scripts/etl.py
    python scripts/load_database.py
+   python scripts/create_excel_dashboard.py
    ```
 
 ## Methodology & Limitations
