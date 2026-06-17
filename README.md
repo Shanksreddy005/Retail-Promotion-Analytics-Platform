@@ -7,6 +7,28 @@
 - **Key Findings**: Promotional groups exhibited statistically detectable differences in repeat purchase behavior (Z-test p < 0.001), though the absolute conversion lift was modest. Average Order Value (AOV) differences were not statistically significant (t-test p = 0.344).
 - **Tech Stack**: Python (Pandas, NumPy, SciPy, Statsmodels), SQLite (PostgreSQL compatible), SQL, Git/GitHub, Tableau/Excel Specifications.
 
+## Dashboard Highlights
+
+### Executive Dashboard
+<img src="images/dashboard.png" width="1000">
+
+The central operational control center illustrating core KPIs (Revenue, AOV, Repeat Purchase Rates, and Promotional Shares) alongside performance metrics and breakdowns.
+
+### Revenue by Promotion
+<img src="images/revenuebypromo.png" width="700">
+
+A campaign-specific breakdown highlighting total revenue, order distributions, and comparative conversion returns across the control and treatment cohorts.
+
+### Monthly Revenue Trend
+<img src="images/monthlytrend.png" width="700">
+
+A longitudinal view of sales trends across the dataset timeline comparing seasonal baseline control sales against targeted promotional campaigns.
+
+### Top States by Revenue
+<img src="images/topstates.png" width="700">
+
+A geographic responsiveness visualization mapping customer state distributions and transaction volume concentrations across Brazil.
+
 ## Business Problem
 In retail and e-commerce, promotions are widely used to acquire customers, stimulate order size, and drive customer lifetime value. However, broad discount strategies risk margin cannibalization without yielding true customer retention. To ensure promotional spend is optimized, this platform establishes a formal experimentation framework to measure whether discounts drive incremental long-term repeat purchase rates and average order values, or if customer purchase behavior remains unchanged.
 
@@ -29,6 +51,13 @@ In retail and e-commerce, promotions are widely used to acquire customers, stimu
 ## Business Recommendation
 Based on the simulated experimentation framework, moderate discount strategies (e.g., 10%) may offer the strongest balance between customer retention and revenue preservation. However, future validation using real campaign data is required before operational deployment.
 
+## Project Impact
+- Processed and analyzed 99,441 e-commerce orders.
+- Built an end-to-end analytics workflow spanning ETL, SQL, statistical testing, and dashboard reporting.
+- Evaluated simulated promotion campaigns using A/B testing methodologies.
+- Produced stakeholder-facing reporting assets in Excel and Tableau-compatible formats.
+- Designed a reusable experimentation framework that can be extended to real promotional datasets.
+
 ## Technical Competencies Demonstrated
 - **ETL Development**: Engineered automated Python pipelines utilizing Pandas and NumPy to execute data ingestion, validation, deduplication, and feature engineering.
 - **Relational Data Modeling**: Designed a clean Star Schema database structure separating dimension tables (`dim_customers`, `dim_promotions`, `dim_date`) from fact tables (`fact_orders`, `fact_customer_metrics`).
@@ -38,14 +67,7 @@ Based on the simulated experimentation framework, moderate discount strategies (
 - **Analytics Engineering Practices**: Structured database loading scripts with dotenv configuration, verified query execution, and enforced strict reproducibility seeds.
 
 ### Portfolio Skills Demonstrated
-- Developed an interactive Excel dashboard utilizing Pivot Tables, Pivot Charts, slicers, and KPI scorecards to evaluate promotional effectiveness, customer retention, and regional performance across simulated retail campaigns.
-
-## Excel Dashboard
-The Excel dashboard communicates campaign efficacy directly to stakeholders and business executives. Built on the Star Schema warehouse outputs, it leverages interactive slicers, metrics grids, and conditional formatting.
-
-Interactive dashboard developed using Pivot Tables, Pivot Charts, KPI scorecards, and slicers to evaluate promotional effectiveness.
-
-![Excel Dashboard](images/dashboard.png)
+- Developed an executive-style Excel dashboard using Pivot Tables, Pivot Charts, KPI scorecards, slicers, conditional formatting, and trend analysis to communicate campaign effectiveness, customer retention, and regional performance insights.
 
 ## Architecture Diagram
 ```mermaid
@@ -77,7 +99,10 @@ Retail-Promotion-Analytics/
 │   ├── Promotion_Analytics_Dashboard.xlsx # Completed Excel workbook
 │   └── excel_spec.md         # Spreadsheet design layout spec
 ├── images/
-│   └── excel_dashboard.png   # Dashboard visual preview mockup
+│   ├── dashboard.png
+│   ├── revenuebypromo.png
+│   ├── monthlytrend.png
+│   └── topstates.png
 ├── notebooks/                # Jupyter Notebooks (Cleaning, EDA, Stats, Cohorts)
 ├── sql/                      # SQL assets (schema.sql, views.sql, business_queries.sql)
 ├── tableau/                  # BI Specifications
