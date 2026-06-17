@@ -45,7 +45,7 @@ The Excel dashboard communicates campaign efficacy directly to stakeholders and 
 
 Interactive dashboard developed using Pivot Tables, Pivot Charts, KPI scorecards, and slicers to evaluate promotional effectiveness.
 
-![Excel Dashboard](images/excel_dashboard.png)
+![Excel Dashboard](images/dashboard.png)
 
 ## Architecture Diagram
 ```mermaid
